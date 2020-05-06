@@ -1,311 +1,745 @@
 <!DOCTYPE html>
-<html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Monk AI - Computer Vision Library</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <script src="https://kit.fontawesome.com/2f194fa194.js" crossorigin="anonymous"></script>
-        <!-- Fonts -->
-        <!-- Source Sans Pro -->
-        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400i|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap" rel="stylesheet">
+<head>
 
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
-        
-        <!-- CSS -->
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Bardo Vision</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-        <!-- Bootstrap CDN -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-        
-        <link rel="stylesheet" href="css/owl.carousel.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link rel="stylesheet" href="css/style.css">
-        <!-- Responsive Stylesheet -->
-        <link rel="stylesheet" href="css/responsive.css">
-        <style>
-            .hero {
-                background-attachment: fixed;       
-                webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-                height:20%;
-                width:20%; 
-            }
-        </style>
-    </head>
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <body id="body">
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
 
-    	<div id="preloader-wrapper">
-    		<div class="pre-loader"></div>
-    	</div>
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
 
-	    <!-- 
-	    Header start
-	    ==================== -->
-        <div class="container">
-            <nav class="navbar navigation" id="top-nav">
-                <a class="navbar-brand logo" href="#">
-                    <h1 style="padding-top: 10px;">Monk AI</h1>
-                </a>
-              <button class="navbar-toggler hidden-lg-up float-lg-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
-                  <i class="tf-ion-android-menu"></i>
-              </button>
-              <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-                <ul class="nav navbar-nav menu float-lg-right" id="top-nav">
-                  <li class=" active">
-                    <a href="#hero">HOME</a>
-                  </li>
-                  <li class="">
-                    <a href="#features">FEATURES</a>
-                  </li>
-                  <li class="">
-                    <a href="https://github.com/Tessellate-Imaging/monk_v1" target="_blank">DOWNLOAD</a>
-                  </li>
-                  <li class="">
-                    <a href="#signup" target="blank">CONTRIBUTE</a>
-                  </li>
-                  <li class="">
-                        <a href="https://li8bot.github.io/monkai/#/home" target="_blank">DOCUMENTATION</a>
-                  </li>
-                  <li class="">
-                        <a href="https://medium.com/@monkai.betasignup" target="_blank">BLOG</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="images/logo.png" alt="Homepage">
+            </a>
         </div>
-        
 
-	    <section id="hero" style="background: url('images/main.png'), url('images/comingsoon.png'); background-position: top center, bottom right; background-size: 20%,30%; background-repeat: no-repeat, no-repeat; height:50em;" id="home" class="hero-area">
-	            <div style="padding-top: 0px;" class="row">
-                    <div class="col-md-6 text-center">
-                        <img class="img-fluid shadow" src="images/test.gif" alt="" />
-                    </div>
-	                <div class="col-md-6">
-	                    <div class="block">
-                            <h1 class="">Monk AI<sub style="font-size: 20px;">v1.0</sub></h1>
-                            <h3 class="">Standardising Computer Vision Workflows</h3>
-                            <br>
-                            <h4>Powered by Deep Learning Algorithms</h4>
-	                        <p></p>
-                            <a href="https://github.com/Tessellate-Imaging/monk_v1" class="btn btn-main" role="button" target="_blank"><i class="fab fa-github"></i> DOWNLOAD</a>
-                            <a href="#signup" class="btn btn-main" role="button">CONTRIBUTE</a>
-	                    </div>
-	                </div>
-	            </div><!-- .row close -->
-	        </div><!-- .container close -->
-	    </section><!-- header close -->
+        <nav class="header-nav">
 
-        <section id="about" style="background:black; opacity: 0.9; color: #FFF" class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center">
-                        <a href="https://tessellateimaging.com" target="blank"><img class="img-fluid" style="width:75%; margin-bottom: 40px;" src="images/logo.png" alt=""></a>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="content mt-50">
-                            <h2 style="color: white;" class="subheading subheading">Designed by Computer Vision professionals and consultants</h2>
-                            <p>We have been in the domain of Computer Vision industry for the past 7 years, working with a broad spectrum of imaging modalities.
-                                Our teams have served clients across the globe solving computational challenges for Computer Vision products. We bring to you a set of easy to use tools for building Computer Vision applications.
-                            </p>
-                        </div>
-                    </div>
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+                
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
+                    <li><a class="smoothscroll"  href="#services" title="services">Services</a></li>
+                    <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
+                    <li><a class="smoothscroll"  href="#clients" title="clients">Clients</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+                </ul>
+    
+                <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+    
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                    </li>
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>  <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-image-src="images/test.jpg" data-parallax="scroll" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>Maximise Autonomous Intelligence</h3>
+
+                <h1>
+                    Bardo
+                    Vision
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="#contact" class="smoothscroll btn btn--stroke">
+                        Start a Project
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        More About Us
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div> <!-- end home-content -->
+
+
+        <ul class="home-social">
+            <li>
+                <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-linkedin" aria-hidden="true"></i><span>Linkedin</span></a>
+            </li>
+        </ul> 
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--dark">Hello There</h3>
+                <h1 class="display-1 display-1--light">We Are Bardo Vision</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt. 
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+                
+            <div class="col-block stats__col ">
+                <div class="stats__count">5</div>
+                <h5>Awards Received</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">9999</div>
+                <h5>Cups of Coffee</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">100</div>
+                <h5>Projects Completed</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">10</div>
+                <h5>Happy Clients</h5> 
+            </div>
+
+        </div> <!-- end about-stats -->
+
+        <div class="about__line"></div>
+
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id='services' class="s-services">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">What We Do</h3>
+                <h1 class="display-2">We’ve got everything you need to launch and grow your business</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row services-list block-1-2 block-tab-full">
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-paint-brush"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Data Management</h3>
+                    <p>Automated Exploratory Data Analysis and Insights
+                    </p>
                 </div>
             </div>
-        </section>
 
-        <!-- 
-        Feature start
-        ==================== -->
-        <section id="features" class="feature section">
-            <div class="container">
-                <div class="row">
-                    <div class="heading">
-                        <h2>Some Unique Features</h2>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="feature-box">
-                            <i class="fas fa-feather"></i>
-                            <i class="fas fa-code"></i>
-                            <i class="fab fa-python"></i>
-                            <h4>Low Code Deep Learning</h4>
-                            <p>Build prototypes, create multiple experiments writing less code without losing framework's advanced capabilities and features
-                            </p>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-clock"></i>
-                            <i class="fas fa-clock"></i>
-                            <i class="fas fa-clock"></i>
-                            <i class="fas fa-clock"></i>
-                            <h4>Compare Experiments</h4>
-                            <p>With quick compare, find deep insights into your projects comparing experiments across frameworks
-                            </p>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-space-shuttle"></i>
-                            <i class="fas fa-space-shuttle"></i>
-                            <h4>Resume Experiment</h4>
-                            <p>Taking a break. Pause training and resume from the last experiment state.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <img style="width:75%;height:75%; padding-top: 50px;" src="https://media.istockphoto.com/vectors/buddhist-monk-meditating-vector-id836365910?k=6&m=836365910&s=612x612&w=0&h=i5xW98lpgMth3k-8K37ABcHex8KQDLG4eGF-Pkf5km4=" alt="">
-                    </div>
-                    <div class="col-md-4">
-                        <div class="feature-box">
-                            <span>
-                                <a href="https://keras.io/" target="blank">
-                                    <img style="width: 30px; padding-bottom: 10px;" class="img-fluid" src="https://keras.rstudio.com/logo.png" alt="">
-                                </a>
-                                <a href="https://pytorch.org/">
-                                    <img style="width: 30px; padding-bottom: 10px;" class="img-fluid" src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2019/01/pytorch-logo.png" alt="">
-                                </a>
-                                <a href="https://mxnet.apache.org/">
-                                    <img style="width: 30px; padding-bottom: 10px;" class="img-fluid" src="https://aws1.discourse-cdn.com/business4/uploads/mxnet/original/1X/e686111ae49ad78c6f239002a9c0b5919404347f.png" alt="">
-                                </a>
-                            </span>
-                            <h4>Latest Libraries</h4>
-                            <p>Support for <a href="https://pytorch.org/">Pytorch</a>, <a href="https://mxnet.apache.org/">Mxnet</a>, <a href="https://keras.io/">Keras</a> with unified wrapper language to access them all</p>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-vials"></i>
-                            <i class="fas fa-vials"></i>
-                            <h4>Curated Workflows</h4>
-                            <p>Monitor metrics and update hyperparameters in a structured deep learning pipeline</p>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-lock-open"></i>
-                            <i class="fab fa-osi"></i>
-                            <h4>Open Source</h4>
-                            <p>Free, local, open-source, Monk AI is a tool that can cater to both beginners and experts of Computer Vision</p>
-                        </div>
-                    </div>
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-group"></i>
                 </div>
-            </div><!-- .container close -->
-        </section><!-- #service close -->
-        <section id="about" class="promo-details section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 text-center">
-                        <div class="content mt-50">
-                            <div class="feature-box">
-                                <h2 style="text-align: center;">Compare Metrics</h2>
-                                <h5>Quickly compare insights from multiple experiments to find out the best models</h5>
-                                <br>
-                                <a href="https://clever-noyce-f9d43f.netlify.com/#/compare_experiment" target="blank">
-                                    <button class="btn btn-default btn-main docs" role="button">DOCUMENTATION</button>
+                <div class="service-text">
+                    <h3 class="h2">Effortless DL Ops</h3>
+                    <p>CI/CD Pipelines for Computer Vision, Low Code/No code,
+                        Deploy to Cloud/On-prem/Edge
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-megaphone"></i>
+                </div>  
+                <div class="service-text">
+                    <h3 class="h2">Deep Learning Orchestration</h3>
+                    <p>Design, Train, Automate, Customise, Optimise and Deploy.
+                        Tuning, Benchmarking, Versioning and Neural Network design.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-earth"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Team Collaboration</h3>
+                    <p>Collaborate, Share, Monitor, Improve
+                    </p>
+                </div>
+            </div>
+
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+
+
+    <!-- works
+    ================================================== -->
+    <section id='works' class="s-works">
+
+        <div class="intro-wrap">
+                
+            <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead">Recent Works</h3>
+                    <h1 class="display-2 display-2--light">We love what we do, check out some of our latest works</h1>
+                </div>
+            </div> <!-- end section-header -->
+
+        </div> <!-- end intro-wrap -->
+
+        <div class="row works-content">
+            <div class="col-full masonry-wrap">
+                <div class="masonry">
+    
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                    <img src="images/portfolio/lady-shutterbug.jpg" 
+                                         srcset="images/portfolio/lady-shutterbug.jpg 1x, images/portfolio/lady-shutterbug@2x.jpg 2x" alt="">
                                 </a>
+                            </div>
+    
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Shutterbug
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Branding
+                                </p>
+                            </div>
+    
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+    
+                            <div class="item-folio__caption">
+                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            </div>
+    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
+                                    <img src="images/portfolio/woodcraft.jpg" 
+                                         srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
+                                </a>
+                            </div>
+    
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Woodcraft
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Web Design
+                                </p>
+                            </div>
+    
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+    
+                            <div class="item-folio__caption">
+                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            </div>
+    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+    
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/g-beetle.jpg" class="thumb-link" title="The Beetle Car" data-size="1050x700">
+                                    <img src="images/portfolio/the-beetle.jpg"
+                                         srcset="images/portfolio/the-beetle.jpg 1x, images/portfolio/the-beetle@2x.jpg 2x" alt="">
+                                </a>
+                            </div>
+    
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    The Beetle
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Web Development
+                                </p>
+                            </div>
+    
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+    
+                            <div class="item-folio__caption">
+                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            </div>
+    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+    
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/g-grow-green.jpg" class="thumb-link" title="Grow Green" data-size="1050x700">
+                                    <img src="images/portfolio/grow-green.jpg" 
+                                         srcset="images/portfolio/grow-green.jpg 1x, images/portfolio/grow-green@2x.jpg 2x" alt="">
+                                </a>
+                            </div>
+    
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Grow Green
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Branding
+                                </p>
+                            </div>
+    
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+    
+                            <div class="item-folio__caption">
+                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            </div>
+    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/g-guitarist.jpg" class="thumb-link" title="Guitarist" data-size="1050x700">
+                                    <img src="images/portfolio/guitarist.jpg" 
+                                         srcset="images/portfolio/guitarist.jpg 1x, images/portfolio/guitarist@2x.jpg 2x" alt="">
+                                </a>
+                            </div>
+    
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Guitarist
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Web Design
+                                </p>
+                            </div>
+    
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+    
+                            <div class="item-folio__caption">
+                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            </div>
+    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+    
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/g-palmeira.jpg" class="thumb-link" title="Palmeira" data-size="1050x700">
+                                    <img src="images/portfolio/palmeira.jpg"
+                                         srcset="images/portfolio/palmeira.jpg 1x, images/portfolio/palmeira@2x.jpg 2x" alt="">
+                                </a>
+                            </div>
+    
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Palmeira
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Web Design
+                                </p>
+                            </div>
+    
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+    
+                            <div class="item-folio__caption">
+                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            </div>
+    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                </div> <!-- end masonry -->
+            </div> <!-- end col-full -->
+        </div> <!-- end works-content -->
+
+    </section> <!-- end s-works -->
+
+
+    <!-- clients
+    ================================================== -->
+    <section id="clients" class="s-clients">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Our Team</h3>
+                <h1 class="display-2">Bardo Vision has years of experience in getting shit done</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row clients-outer" data-aos="fade-up">
+            <div id="team" class="col-full">
+
+                <div id="" class="clients">
+                    <div id="user" class="testimonials__info">
+                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">    
+                        <span class="testimonials__name">Bardo Thodol</span> 
+                    </div>
+                    <div id="user" class="testimonials__info">
+                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">    
+                        <span class="testimonials__name">Bardo Thodol</span> 
+                    </div>
+                    <div id="user" class="testimonials__info">
+                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">    
+                        <span class="testimonials__name">Bardo Thodol</span> 
+                    </div>
+                    <div id="user" class="testimonials__info">
+                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">    
+                        <span class="testimonials__name">Bardo Thodol</span> 
+                    </div>
+                    <div id="user" class="testimonials__info">
+                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">    
+                        <span class="testimonials__name">Bardo Thodol</span> 
+                    </div>
+                    <div id="user" class="testimonials__info">
+                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">    
+                        <span class="testimonials__name">Bardo Thodol</span> 
+                    </div>
+                </div> <!-- end clients -->
+            </div> <!-- end col-full -->
+        </div> <!-- end clients-outer -->
+
+    </section> <!-- end s-clients -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+
+        <div class="overlay"></div>
+        <div class="contact__line"></div>
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Contact Us</h3>
+                <h1 class="display-2 display-2--light">Reach out for a new project or just say hello</h1>
+            </div>
+        </div>
+
+        <div class="row contact-content" data-aos="fade-up">
+            
+            <div class="contact-primary">
+
+                <h3 class="h6">Send Us A Message</h3>
+
+                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                    <fieldset>
+    
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Submit</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center">
-                        <div class="content mt-50">
-                            <div class="feature-box" style="padding: 0 10px;">
-                                <h2 style="text-align: center;">Copy Experiments</h2>
-                                <h5>Copy and update previously created experiments as templates</h5>
-                                <br>
-                                <br>
-                                <a href="https://clever-noyce-f9d43f.netlify.com/#/copy_experiment" target="blank">
-                                    <button class="btn btn-default btn-main docs" role="button">DOCUMENTATION</button>
-                                </a>
+    
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div> 
+            
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+
+            </div> <!-- end contact-primary -->
+
+            <div class="contact-secondary">
+                <div class="contact-info">
+
+                    <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
+
+                    <div class="cinfo">
+                        <h5>Where to Find Us</h5>
+                        <p>
+                            1600 Amphitheatre Parkway<br>
+                            Mountain View, CA<br>
+                            94043 US
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>Email Us At</h5>
+                        <p>
+                            contact@bardovision.io<br>
+                            info@bardovision.io
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>Call Us At</h5>
+                        <p>
+                            Phone: (+63) 555 1212<br>
+                            Mobile: (+63) 555 0100<br>
+                            Fax: (+63) 555 0101
+                        </p>
+                    </div>
+
+                    <ul class="contact-social">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul> <!-- end contact-social -->
+
+                </div> <!-- end contact-info -->
+            </div> <!-- end contact-secondary -->
+
+        </div> <!-- end contact-content -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+        <div class="row footer-main">
+
+            <div class="col-six tab-full left footer-desc">
+
+                <div class="footer-logo"></div>
+                Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Quaerat voluptas autem necessitatibus vitae aut.
+
+            </div>
+
+            <div class="col-six tab-full right footer-subscribe">
+
+                <h4>Get Notified</h4>
+                <p>Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae aut non alias sed quia. Ut itaque enim optio ut excepturi deserunt iusto porro.</p>
+
+                <div class="subscribe-form">
+                    <form id="mc-form" class="group" novalidate="true">
+                        <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+                        <input type="submit" name="subscribe" value="Subscribe">
+                        <label for="mc-email" class="subscribe-message"></label>
+                    </form>
+                </div>
+
+            </div>
+
+        </div> <!-- end footer-main -->
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Bardo Vision 2020</span> 
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center">
-                        <div class="content mt-50">
-                            <div class="feature-box">
-                                <h2 style="text-align: center;">Object Detection</h2>
-                                <h5>Create Custom Object Detection models using MXRCNN, YOLOv3, SSD and many more</h5>
-                                <br>
-                                <a href="https://github.com/Tessellate-Imaging/Monk_Object_Detection" target="blank">
-                                    <button class="btn btn-default btn-main docs" role="button">DOCUMENTATION</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
                 </div>
             </div>
-        </section>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
 
 
-        <section id="signup" class="call-to-action section bg-opacity bg-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 wow text-center">
-                        <div class="block">
-                            <h2 class="subheading">Signup for the Mailing List</h2>
-                            <p>We are building a curated community of developers to build the next generation of 
-                                Computer Vision tools
-                            </p>
-                            <form id="signupForm">
-                            <div class="col-lg-6 offset-lg-3">
-                                <div class="input-group">
-                                  <input type="email" class="form-control" id="inputEmail" placeholder="Your Email Address Here">
-                                  <span class="input-group-btn">
-                                    <button class="btn btn-default btn-main" type="submit">Request Access</button>
-                                  </span>
-                                </div><!-- /input-group -->
-                              </div><!-- /.col-lg-6 -->
-                            </form>
-                        </div>
-                    </div>
-                </div>
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-        </section><!-- #call-to-action close -->
+        </div>
+    </div>
 
 
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
-        <footer>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="block">
-                            <a href="#home" class="footer-logo">Monk AI</a>
-                            <ul class="menu">
-                                <li class=" active">
-                                    <a href="#hero">HOME</a>
-                                </li>
-                                <li class="">
-                                    <a href="#features">FEATURES</a>
-                                </li>
-                                <li class="">
-                                    <a href="#about">ABOUT</a>
-                                </li>
-                                <li class="">
-                                    <a href="#signup">CONTRIBUTE</a>
-                                </li>
-                                <li class="">
-                                    <a href="https://li8bot.github.io/monkai/#/home" target="_blank">DOCUMENTATION</a>
-                            </li>
-                            </ul>
-                            <p class="copyright-text">Copyright &copy; <a href="http://www.tessellateimaging.com">Tessellate Imaging 2019</a>| All right reserved.</p>
-                        </div>
-                    </div>
-                </div>
-        </footer>
+</body>
 
-
-        <!-- Js -->
-        <script src="js/vendor/jquery-2.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/main.js"></script>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
-        
-    </body>
 </html>
