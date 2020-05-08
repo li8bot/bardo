@@ -113,14 +113,20 @@ a:hover, a:active {
   width:400px;
   height: 50px;
   padding-left: 800px;
-  position: fixed;
   padding-top: 300px;
+position: fixed;
+
+}
+
+#container-flow > p {
+    position: fixed;
 }
 
 #flip {
     width: 400px;
   height:50px;
   overflow:hidden;
+  position: fixed;
 }
 
 #flip > div > div {
