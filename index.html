@@ -34,10 +34,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+
 </head>
 
 <body id="top">
-
     <!-- header
     ================================================== -->
     <header class="s-header">
@@ -103,19 +103,9 @@
         <div class="shadow-overlay"></div>
 
         <div class="home-content">
-
+            <canvas id="canvas">
+            </canvas>
             <div class="row home-content__main">
-            <div id="container">
-                <div class="circle rotate rotate1">
-                    <div id="build" class="circle color color1"></div>
-                </div>
-                <div class="circle rotate rotate2">
-                    <div class="circle color color2"></div>
-                </div>
-              <div class="circle rotate rotate3">
-                <div class="circle color color3"></div>
-              </div>
-            </div>
                 <h3>Maximise Autonomous Intelligence</h3>
 
                 <h1>
@@ -126,7 +116,7 @@
 
                 <div class="home-content__buttons">
                     <a href="#contact" class="smoothscroll btn btn--stroke">
-                        Coming Soon!
+                        Contact Us
                     </a>
                     <a href="#about" class="smoothscroll btn btn--stroke">
                         More About Us
@@ -267,6 +257,7 @@
         </div> <!-- end services-list -->
 
     </section> <!-- end s-services -->
+
 
     <!-- works
     ================================================== -->
@@ -580,7 +571,7 @@
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">Contact Us</h3>
-                <h1 class="display-2 display-2--light">Reach out to know more</h1>
+                <h1 class="display-2 display-2--light">Reach out for a new project or just say hello</h1>
             </div>
         </div>
 
@@ -792,9 +783,48 @@
 
     <!-- Java Script
     ================================================== -->
+
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        canvas.width = 800;
+        canvas.height = 800;
+
+        var angle = 0;
+        var scale = 0.99;
+        var squares = 60;
+
+        draw();
+
+        function draw() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.save();
+          ctx.translate(canvas.width / 2, canvas.height / 2);
+          
+          for(var i = 0; i < squares; i++) {
+            ctx.strokeStyle = 'hsl(' + i * 12 + ', 61%, 50%)';
+            ctx.lineWidth = 1;
+            // draws a rectangle
+            ctx.strokeRect(-200, -200, 400, 400);
+            // draws a circle
+            // ctx.beginPath(); 
+            // ctx.arc(-50, -50, 200, 200, Math.PI * 2, true);
+            // ctx.stroke(); 
+            ctx.rotate(angle * Math.PI / 180);
+            ctx.scale(scale, scale);
+          }
+          
+          ctx.restore();
+           
+          // increase the angle to make it go faster
+          angle -= 0.03;
+          
+          window.requestAnimationFrame(draw);
+        }
+    </script>
 
 </body>
 
