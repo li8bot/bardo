@@ -343,7 +343,7 @@ $(window).scroll(function(){
                 $.ajax({
     
                     type: "POST",
-                    url: "inc/sendEmail.php",
+                    url: "js/sendEmail.php",
                     data: $(form).serialize(),
                     beforeSend: function() { 
     
