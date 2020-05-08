@@ -420,7 +420,7 @@ $(window).scroll(function(){
 
         $.ajaxChimp.translations.es = {
             'submit': 'Submitting...',
-            0: '<i class="fa fa-check"></i> We have sent you a confirmation email',
+            0: '<i class="fa fa-check"></i> Thank you for subscribing. Bardo is coming soon. Stay tuned for updates!',
             1: '<i class="fa fa-warning"></i> You must enter a valid e-mail address.',
             2: '<i class="fa fa-warning"></i> E-mail address is not valid.',
             3: '<i class="fa fa-warning"></i> E-mail address is not valid.',
