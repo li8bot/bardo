@@ -96,14 +96,17 @@ body {
   /*border: 1px solid red;*/
   margin: 0 auto;
   padding-left: 20%;
-  animation: rotate360 10s ease-in-out 1;
+  animation: rotate360 6s ease-in-out 1;
 }
 
 .circle {
+  background: "static/images/sample-image.jpg";
+
   position: absolute;
   width: 200px;
   height: 200px;
   border-radius: 100px;
+
 }
 
 .rotate {
@@ -113,19 +116,20 @@ body {
 .rotate1 {
   top: -100px;
   left: 0px;
-  animation: rotate1 10s ease-in-out infinite;
+  animation: rotate1 6s ease-in-out infinite;
+  background: "static/images/sample-image.jpg"
 }
 
 .rotate2 {
   top: 50px;
   right: -86px;
-  animation: rotate2 10s ease-in-out infinite;
+  animation: rotate2 6s ease-in-out infinite;
 }
 
 .rotate3 {
   top: 50px;
   left: -86px;
-  animation: rotate3 10s ease-in-out infinite;
+  animation: rotate3 6s ease-in-out infinite;
 }
 
 .color {
@@ -137,7 +141,8 @@ body {
 }
 
 #build {
-    background-image: "static/images/sample-image.jpg"
+    background: "static/images/sample-image.jpg"
+    z-index: 3;
 }
 
 .color1 {
@@ -152,12 +157,19 @@ body {
 
 .color3 {
   background: rgba(0, 0, 255, .5);
+
   /*border-color: rgb(0,0,255);*/
 }
 
 @keyframes rotate1 {
   0% {
     transform: rotate(180deg);
+  }
+  33.33% {
+    transform: rotate(360deg)
+  }
+  50% {
+    transform: rotate(360deg)
   }
   70% {
     transform: rotate(540deg);
@@ -171,6 +183,12 @@ body {
   0% {
     transform: rotate(-60deg);
   }
+  33.33% {
+    transform: rotate(120deg)
+  }
+  50% {
+    transform: rotate(120deg)
+  }
   70% {
     transform: rotate(300deg);
   }
@@ -183,6 +201,12 @@ body {
   0% {
     transform: rotate(60deg);
   }
+  33.33% {
+    transform: rotate(240deg)
+  }
+  50% {
+    transform: rotate(240deg)
+  }
   70% {
     transform: rotate(420deg);
   }
@@ -194,6 +218,9 @@ body {
 @keyframes rotate360 {
   0% {
     transform: rotate(0deg);
+  }
+  33.33% {
+    transform: rotate(180deg)
   }
 
   50% {
@@ -2651,6 +2678,7 @@ html.no-csstransitions .home-content__main {
 .item-folio {
     position: relative;
     overflow: hidden;
+    padding: 1%;
 }
 
 .item-folio__thumb img {
@@ -3530,11 +3558,13 @@ Team
 --- */
 .teamy{
   position: relative;
+  border-radius: 50%;
+  padding: 5%;
 }
 
 .teamy__layout{
   position: relative;
-  overflow: hidden;
+  border-radius: 50%;
 }
 
 .teamy__layout:before{
@@ -3543,6 +3573,7 @@ Team
   top: 50%;
   left: 50%;
   z-index: 2;
+  border-radius: 50%;
 }
 
 .teamy__avatar{
@@ -3551,6 +3582,8 @@ Team
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  border-radius: 50%;
+  padding: 5%;
 }
 
 .teamy__back{
@@ -3561,27 +3594,16 @@ Team
   width: 100%;
   height: 100%;  
   display: flex;
-
   position: absolute;
   top: 0;
   left: 0;    
-  z-index: 3;
+  z-index: 0;
 }
 
-.teamy__back-inner{
-  margin: auto;
-  will-change: opacity;
-  animation: fade .4s cubic-bezier(0.71, 0.05, 0.29, 0.9) .2s both;
-}
 
-@keyframes fade{
-  0%{
-    opacity: 0;
-  }
-
-  100%{
-    opacity: 1;
-  }  
+.teamy__avatar:hover {
+    webkit-filter: blur(1px); /* Chrome, Safari, Opera */
+    filter: blur(1px);
 }
 
 .teamy__name, .teamy__post{
@@ -3601,6 +3623,7 @@ Team
 
 .teamy__back-inner{
   padding: 20px;
+
 }
 
 .teamy__content{
@@ -3627,7 +3650,6 @@ Team
 .teamy_mask-circle .teamy__layout:before{
   width: 0;
   height: 0;
-  padding: 25%;
   border-radius: 50%;
 
   transition: transform .3s ease, opacity .3s ease-out;
